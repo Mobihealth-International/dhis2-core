@@ -64,7 +64,7 @@ services:
   db:
     <<: *db-base
     ports:
-      - "127.0.0.1:5432:5432"
+      - "127.0.0.1:${DB_PORT:-5433}:5432"
 
   # Test synchronizing data and metadata between two DHIS2 instances
   # Run

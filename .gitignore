@@ -46,7 +46,19 @@ dhis-2/dhis-web-server/src/main/jib/usr/local/bin/curl
 # ignore local docker override files
 docker-compose.override.yml
 .env
+.env.*
+!.env.example
 # ignore JMH benchmark results
 jmh-result*.csv
 # ignore performance test results downloaded from CI
 gatling-report-*/
+
+# ignore database dumps & backups
+/*.sql.gz
+/*.dump
+dump.sql*
+
+# OS specific files
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
