@@ -18,7 +18,7 @@ services:
     configs:
       - source: dhis_conf
         target: /opt/dhis2/dhis.conf
-    expose:
+    ports:
       - "8080"
     depends_on:
       db:
