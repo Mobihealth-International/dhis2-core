@@ -19,7 +19,7 @@ services:
       - source: dhis_conf
         target: /opt/dhis2/dhis.conf
     ports:
-      - "8080"
+      - "8080:32768"
     depends_on:
       db:
         condition: service_healthy
